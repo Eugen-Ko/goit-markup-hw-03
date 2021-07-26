@@ -57,10 +57,26 @@ Background color
   display: block;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* marking header */
 
-header {
-  border-bottom: 2px thistle;
+.header {
+  border-bottom: 1px solid #ECECEC;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .logo {
@@ -70,6 +86,7 @@ header {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  margin-right: 94px;
 }
 
 .logo-black {
@@ -79,13 +96,8 @@ header {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  margin-right: 94px;
+}
 
-}
-.webstudio{
-  padding-top: 24px;
-  padding-bottom: 25px;
-}
 .logo-white {
   color: var(--white-text-color);
   font-family: Raleway;
@@ -93,7 +105,6 @@ header {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  padding-top: 60px;
 }
 
 .site-nav .link {
@@ -104,7 +115,7 @@ header {
   letter-spacing: 0.02em;
 }
 
-.site-nav li:nth-child(n-1) {
+.site-nav li:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -135,7 +146,6 @@ header {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
-
 }
 
 .header-contacts li:not(:first-child) {
@@ -156,16 +166,15 @@ header {
 /* Hero */
 
 .hero {
-  height: 600px;
-  border-top: 1px solid #ECECEC;
   background-color: var(--footer-hero-background);
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  /* flex-direction: column; */
 }
 
 .hero-title {
+  margin: 0 auto;
   margin-top: 0;
   margin-bottom: 30px;
   width: 696px;
@@ -173,11 +182,14 @@ header {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
+  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .hero-button {
+  display: block;
+  margin: 0 auto;
   color: var(--white-background-color);
   background-color: var(--links-color);
   border: none;
@@ -192,19 +204,23 @@ header {
   padding-bottom: 10px;
   padding-left: 22px;
   border-radius: 4px;
+  
 }
 
-/* Feature and our work*/
-.features-work {
-background-color: var(--primary-background);
-}
+/* Section */
 
 .section {
+  padding-top: 94px;
   padding-bottom: 94px;
 }
 
-.feature-list {
-  padding-top: 94px;
+/* Feature */
+.section.feature {
+  padding-bottom: 0px;
+}
+
+.feature-list > li {
+  width: 270px;
 }
 
 .feature-list > li:not(:last-child) {
@@ -230,7 +246,7 @@ justify-content: space-around;
   letter-spacing: 0.03em;
 }
 
-/* Section */
+/* What we are doing */
 .section-title {
   margin: 0;
   margin-bottom: 50px;
@@ -242,52 +258,59 @@ justify-content: space-around;
   letter-spacing: 0.03em;
 }
 
+.we-doing li {
+  width: 370px;  
+}
+
 .we-doing li:not(:last-child) {
   margin-right: 30px;
 }
 
-/* Our Team */
-.section-team {
+/* Team  */
+.team{
   background-color: var(--secondary-background);
 }
 
-.section.team{
-  padding-top: 94px;
-  padding-bottom: 94px;
+.workers li{
+  background-color: #ffffff;
+  text-align: center;
+  width: 270px;
 }
 
 .workers li:not(:last-child) {
-  background-color: #ffffff;
   margin-right: 30px;
-  text-align: center;
 }
-.workers .name {
+
+.worker {
+  padding: 30px 32px 30px 32px;
+}
+
+.worker .name {
   margin: 0;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  padding-top: 30px;
   padding-bottom: 10px;
 }
-.workers .profession {
+.worker .profession {
   margin: 0;
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  padding-bottom: 30px;
 }
 
 /* Footer */
 .footer {
   background-color: var(--footer-hero-background);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .webstudio-footer {
-  padding-top: 60px;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .footer-contacts .adress {
@@ -298,12 +321,8 @@ justify-content: space-around;
   letter-spacing: 0.03em;
 }
 
-.footer-contacts li {
+.footer-contacts li:not(:last-child) {
   margin-bottom: 10px;
-}
-
-.footer-contacts{
-  padding-bottom: 60px;
 }
 
 .footer-contacts .adress:hover,
@@ -339,7 +358,6 @@ justify-content: space-around;
 
 .filters {
   justify-content: center;
-  margin-top: 94px;
   margin-bottom: 50px;
 }
 
@@ -353,11 +371,11 @@ justify-content: space-around;
   line-height: 1.62;
   letter-spacing: 0.03em;
   cursor: pointer;
-  padding-top: 6px;
-  padding-right: 22px;
-  padding-bottom: 6px;
-  padding-left: 22px;
+  padding: 6px 22px 6px 22px;
   border-radius: 4px;
+}
+
+.filters li:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -375,16 +393,20 @@ justify-content: space-around;
 
 }
 
+.project-name {
+  padding: 20px 24px 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
 .projects-title {
   color: var(--black-text-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  margin-top: 20px;
-  margin-right: 24px;
   margin-bottom: 4px;
-  margin-left: 24px;
 }
 
 .projects-description {
@@ -392,9 +414,6 @@ justify-content: space-around;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
-  margin-right: 24px;
-  margin-bottom: 20px;
-  margin-left: 24px;
 } 
 
 .card-set {
@@ -402,7 +421,6 @@ justify-content: space-around;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
-  margin-bottom: 94px;
 }
 
 .item {
@@ -410,9 +428,6 @@ justify-content: space-around;
   padding: 0px;
   margin-left: 30px;
   margin-top: 30px;
-  border: 1px solid #eeeeee;
   flex-basis: calc((100% - 90px) / 3);
   background-color: #ffffff;
-  border-radius: 4px;
-
 }

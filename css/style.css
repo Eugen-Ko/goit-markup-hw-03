@@ -309,8 +309,10 @@ justify-content: space-around;
   padding-bottom: 60px;
 }
 
-.webstudio-footer {
+.footer .logo {
+  display: block;
   margin-bottom: 20px;
+  margin-right: 0;
 }
 
 .footer-contacts .adress {
@@ -401,6 +403,7 @@ justify-content: space-around;
 }
 
 .projects-title {
+  margin: 0;
   color: var(--black-text-color);
   font-weight: 700;
   font-size: 18px;
@@ -410,6 +413,7 @@ justify-content: space-around;
 }
 
 .projects-description {
+  margin: 0;
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.87;

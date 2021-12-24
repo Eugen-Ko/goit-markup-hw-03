@@ -25,19 +25,36 @@ Background color
   --secondary-background: #f5f4fa;
 }
 
-.page {
-  background-color: #ffffff;
-  color: var(--primary-text-color);
-  font-family: Roboto, 'sans-serif';
+body {
+  font-family: 'Roboto', 'Raleway', sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--title-text-color);
+  background-color: var(--white-background-color);
+  letter-spacing: 0.03em;
 }
 
-.list {
-  padding: 0;
-  margin: 0;
+h1,
+h2,
+h3,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
   list-style: none;
 }
 
-.nounderline {
+a {
   text-decoration: none;
 }
 
@@ -91,26 +108,17 @@ Background color
 
 .logo-black {
   color: var(--black-text-color);
-  font-family: Raleway;
   font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
 }
 
 .logo-white {
   color: var(--white-text-color);
-  font-family: Raleway;
   font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
 }
 
 .site-nav .link {
   color: var(--title-text-color);
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
@@ -120,20 +128,9 @@ Background color
 }
 
 .site-nav .link:hover,
-.site-nav .link:focus {
+.site-nav .link:focus,
+.link.current {
   color: var(--links-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-
-.site-nav .link.current {
-  color: var(--links-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
 }
 
 .header-contacts {
@@ -143,7 +140,6 @@ Background color
 .header-contacts .contact {
   color: var(--primary-text-color);
   font-weight: 500;
-  font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
 }
@@ -156,10 +152,6 @@ Background color
 .header-contacts .contact:focus {
   margin: 0;
   color: var(--links-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.02em;
 }
 
 
@@ -233,17 +225,13 @@ justify-content: space-around;
   margin-bottom: 10px;
   color: var(--title-text-color);
   font-weight: bold;
-  font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 .feature-list .description {
   margin: 0;
   color: var(--primary-text-color);
-  font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
 }
 
 /* What we are doing */
@@ -255,7 +243,6 @@ justify-content: space-around;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
-  letter-spacing: 0.03em;
 }
 
 .we-doing li {
@@ -291,7 +278,6 @@ justify-content: space-around;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  letter-spacing: 0.03em;
   padding-bottom: 10px;
 }
 .worker .profession {
@@ -299,7 +285,6 @@ justify-content: space-around;
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.19;
-  letter-spacing: 0.03em;
 }
 
 /* Footer */
@@ -317,10 +302,7 @@ justify-content: space-around;
 
 .footer-contacts .adress {
   color: var(--white-text-color);
-  font-style: normal;
-  font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
 }
 
 .footer-contacts li:not(:last-child) {
@@ -330,27 +312,15 @@ justify-content: space-around;
 .footer-contacts .adress:hover,
 .footer-contacts .adress:focus {
   color: var(--links-color);
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
 }
 
 .footer-contacts .contact {
   color: var(--contacts-footer-color);
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
 }
 
 .footer-contacts .contact:hover,
 .footer-contacts .contact:focus {
   color: var(--links-color);
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
 }
 /* ------------------------------------------ */
 /* Portfolio */
@@ -385,21 +355,12 @@ justify-content: space-around;
 .filters .button:focus {
   color: var(--white-text-color);
   background-color: var(--links-color);
-  border: none;
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  letter-spacing: 0.03em;
-  cursor: pointer;
-
 }
 
 .project-name {
   padding: 20px 24px 20px 24px;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
+  border: 1px solid #eeeeee;
+  border-top: none;
 }
 
 .projects-title {
